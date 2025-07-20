@@ -1,0 +1,147 @@
+.leadership {
+  width: 100%;
+  background: white;
+  padding: 0;
+}
+
+.leadership-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+  .leadership-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.leadership-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #104F55;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.leadership-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.leadership-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #104F55 0%, #32746D 100%);
+  border-radius: 12px 12px 0 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.leadership-card:hover::before {
+  opacity: 1;
+}
+
+.leadership-header {
+  margin-bottom: 1.5rem;
+}
+
+.leadership-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.leadership-role {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #104F55;
+  margin-bottom: 0.5rem;
+}
+
+.leadership-duration {
+  font-size: 1rem;
+  color: #4a5568;
+  font-weight: 500;
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.leadership-mentor {
+  font-size: 1rem;
+  color: #4a5568;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid #32746D;
+}
+
+.leadership-description {
+  color: #4a5568;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.leadership-description p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.leadership-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .leadership-content {
+    gap: 2rem;
+  }
+  
+  .leadership-card {
+    padding: 1.5rem;
+  }
+  
+  .leadership-title {
+    font-size: 1.5rem;
+  }
+  
+  .leadership-role {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leadership-card {
+    padding: 1.2rem;
+  }
+  
+  .leadership-title {
+    font-size: 1.3rem;
+  }
+  
+  .leadership-role {
+    font-size: 1rem;
+  }
+  
+  .leadership-description p {
+    font-size: 0.95rem;
+  }
+} 
