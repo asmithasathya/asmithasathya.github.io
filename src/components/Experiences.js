@@ -11,29 +11,29 @@ const Experiences = () => {
       duration: "Jun 2025 - Present",
       location: "Boston, MA",
       description: [
-        "Developing a digital twin simulation of Medtronic's Hugo Robotic-Assisted Surgery (RAS) system that communicates with the physical robot system via DDS protocol for real-time software testing."
+        "I built a MATLAB/Simulink software testing framework for Hugo RAS system, enabling hardware-free system testing and reducing validation time. I also designed a Unity VR simulation with movement tracking, logging of 8-DOF data, and playback functionality for a formative user study."
       ],
-      technologies: ["Unity", "C#", "Visual Studio", "DDS", "Git"],
+      technologies: ["Unity", "C#", "MATLAB", "Simulink", "Docker", "DDS", "Git"],
       logo: "/logos/medtronic.png"
     },
     {
       title: "Software Applications Engineering Intern",
       company: "Triple Ring Technologies",
-      duration: "June 2024 - Aug 2025",
+      duration: "Jun 2024 - Aug 2025",
       location: "Newark, CA",
       description: [
-        "Utilized C# and XAML to develop GUI applications for 2 diagnostic medical devices intended for market release."
+        "I utilized C# and XAML to develop GUI applications for 2 diagnostic medical devices intended for market release. I additionally developed black box and code inspection test cases for traceability and acceleration of software verification."
       ],
       technologies: ["C#", "XAML", "Figma", ".NET", "Git"],
       logo: "/logos/triplering.png"
     },
     {
-      title: "Diversity by Doing (DxD) HealthTech Intern",
+      title: "DxD HealthTech Intern",
       company: "Stanford Biodesign",
       duration: "Jul 2024",
       location: "Mountain View, CA",
       description: [
-        "Selected to attend Stanford Biodesign’s rigorous 2024 DxD Healthtech Workshop, engaging with 20 industry leaders and other college interns from underrepresented groups in health technology. Explored new innovation in medtech, engaged with industry leaders, and participated in needs-driven Biodesign innovation process."
+        "I was selected to attend Stanford Biodesign’s rigorous 2024 DxD Healthtech Workshop, engaging with industry leaders and other college interns from underrepresented groups in health technology. I explored new innovation in medtech and participated in needs-driven Biodesign innovation process."
       ],
       technologies: ["Human-centered design", "need-finding", "problem framing and validation"],
       logo: "/logos/dxd.png",
@@ -44,7 +44,7 @@ const Experiences = () => {
       duration: "Aug 2023 - May 2024",
       location: "Gaithersburg, MD",
       description: [
-        "Developed over 30 unique R scripts to curate, analyze, and visualize large-scale forensic DNA profiling data for publication. Programmed novel R pipeline that increased speed of labeling and differentiation of allelic and stutter peaks by 90%."
+        "I utilized R  to curate, analyze, and visualize large-scale forensic DNA profiling data for publication. I programmed a novel R pipeline that increased the speed of labeling and differentiation of allelic and stutter peaks."
       ],
       technologies: ["R", "STRmix", "ggplot2", "Plotly"],
       logo: "/logos/nist.png",
@@ -82,7 +82,7 @@ const Experiences = () => {
         "Developed a programming interface using Unity, C#, and Blender to position a dynamic 3D model of the Loop-X mobile imaging robot along 6 coordinates. Reduced integration time of 3D digital twin Operating Room with virtual reality by 15%, enhancing surgical training."
       ],
       technologies: ["Unity", "C#", "Blender", "Plotly"],
-      logo: "/logos/lcsr.webp",
+      logo: "/logos/lcsr.jpeg",
       mentor: "Dr. Mathias Unberath"
     },
     {
@@ -124,14 +124,19 @@ const Experiences = () => {
   const renderExperiences = (experiences) => {
     return experiences.map((exp, index) => (
       <div key={index} className="experience-item">
-        {exp.logo && (
-          <img src={exp.logo} alt={exp.company + ' logo'} className="experience-logo" />
-        )}
-        <div className="experience-header">
+        <div className="experience-bar">
+          <div className="experience-bar-content">
+            <div className="experience-logo-circle">
+              <img src={exp.logo} alt={exp.company + ' logo'} />
+            </div>
+            <span className="experience-company">{exp.company}</span>
+          </div>
+        </div>
+        <div className="experience-header-text">
           <div className="experience-title">
             <h3>{exp.title}</h3>
           </div>
-          <div className="experience-meta">
+          <div className="experience-meta-row">
             <span className="location">{exp.location}</span>
             <span className="duration">{exp.duration}</span>
           </div>

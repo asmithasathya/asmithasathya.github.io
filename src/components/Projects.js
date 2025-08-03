@@ -4,30 +4,41 @@ import './Projects.css';
 const Projects = () => {
   const projectsData = [
     {
+      title: "Multimodal Alerts in Surgical Task Management",
+      image: "/projects/ekg.webp", 
+      semester: "Spring 2025",
+      description: [
+        "Programmed EKG-triggered alert system with 4 alert modalities, integrating hotspot socket communication to control robotic device.",
+        "Conducted a user study during simulated surgical task, logging 1000+ data points from alert system to assess reaction time and accuracy."      
+      ],
+      technologies: ["Python", "Raspberry Pi", "Pygame", "Thonny", "MicroPython"],
+      github: "https://github.com/interminablefields/lantern-ekg-sim"
+    },
+    {
       title: "Predicting Hemoglobin Levels for Anemia Severity Assessment",
-      course: "AI-ML for Global Health",
+      image: "/projects/rbc.jpg", 
       semester: "Fall 2024",
       description: [
         "Developed model for non-invasive anemia diagnosis via cellphone images of patients' palm, fingernails, tongue, and conjunctiva.",
         "Utilized YOLOv8 and EfficientNet for segmentation and regression in Python to determine hemoglobin level, achieving RMSE of 1.34."
       ],
-      technologies: ["Python", "YOLOv8", "EfficientNet", "Computer Vision", "Machine Learning"],
+      technologies: ["Python", "Pandas", "PyTorch", "OpenCV", "scikit-learn"],
       github: "https://github.com/yourusername/anemia-detection"
     },
     {
       title: "Bone Age Prediction from X-Ray Images",
-      course: "Computer Vision",
+      image: "/projects/xray.webp", 
       semester: "Fall 2024",
       description: [
         "Utilized InceptionV3 with data augmentation to build a pediatric bone image classification model from 13000 X-ray images.",
         "Reduced MAE by 55.5% from previously accepted MobileNet model."
       ],
-      technologies: ["Python", "InceptionV3", "Data Augmentation", "Medical Imaging", "Deep Learning"],
+      technologies: ["Python", "OpenCV", " SciPy", "matplotlib"],
       github: "https://github.com/yourusername/bone-age-prediction"
     },
     {
       title: "Query Ability of Probabilistic Data Structures",
-      course: "Computational Genomics: Sequences",
+      image: "/projects/dna.jpg",
       semester: "Fall 2024",
       description: [
         "Implemented bloom filter, quotient filter, and cuckoo filter manually with faster insertion time than PyProbables library functions.",
@@ -45,6 +56,9 @@ const Projects = () => {
         <div className="projects-grid">
           {projectsData.map((project, index) => (
             <div key={index} className="project-card">
+              <div className="project-image">
+                <img src={project.image} alt={project.title} />
+              </div>
               <div className="year-tab">
                 <span>{project.semester}</span>
               </div>
@@ -82,4 +96,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;

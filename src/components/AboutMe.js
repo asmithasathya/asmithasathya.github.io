@@ -70,6 +70,10 @@ const AboutMe = () => {
             </div>
             
           </div>
+          <div className="about-contact-info">
+            <span className="about-email">Email: asmitha.sathya@gmail.com</span>
+            <span className="about-phone">Phone: (609) 462-0213</span>
+          </div>
         </div>
       </div>
     </div>

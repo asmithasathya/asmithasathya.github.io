@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 /* Reset and base styles */
 * {
   margin: 0;
@@ -11,8 +13,14 @@ html {
 
 body, .App {
   background: white !important;
+  font-family: "Quicksand", sans-serif;
   margin: 0 !important;
   padding: 0 !important;
+  background-image: 
+    linear-gradient(to right, #354f521b 1px, transparent 1px),
+    linear-gradient(to bottom, #354f521b 1px, transparent 1px) !important;
+  background-size: 50px 50px !important;
+  background-position: top left !important;
 }
 
 /* Main content */
@@ -22,12 +30,12 @@ body, .App {
 
 /* Section styles */
 .section {
-  min-height: 100vh;
+  min-height: 800px;
   padding: 100px 0;
   display: flex;
   align-items: flex-start;
   position: relative;
-  background: white !important;
+  background: transparent !important; /* Change from white to transparent */
 }
 
 /* First section (About Me) with less padding */
@@ -50,6 +58,29 @@ body, .App {
   text-align: center;
   color: #2d3748;
   position: relative;
+  margin-top: -2.5rem;
+  z-index: 2;
+  background: transparent; /* Change from white to transparent */
+  display: inline-block;
+  padding: 0 1.5rem;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transform: scale(3);
 }
 
 .section-title::after {
@@ -58,10 +89,15 @@ body, .App {
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
+  width: 90px;
   height: 4px;
-  background: linear-gradient(90deg, #104F55 0%, #32746D 100%);
+  background: linear-gradient(100deg, #104F55 0%, #32746D 100%);
   border-radius: 2px;
+}
+
+#publications.section {
+  min-height: unset; 
+  height: 700px;
 }
 
 /* Responsive design */
@@ -188,4 +224,8 @@ a:focus {
 
 a {
   color: #32746D;
+}
+
+#experiences, #projects, #publications, #education, #leadership {
+  scroll-margin-top: 80px;
 }

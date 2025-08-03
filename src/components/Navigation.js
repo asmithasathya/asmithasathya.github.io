@@ -10,9 +10,7 @@ const Navigation = () => {
     { id: 'experiences', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
     { id: 'publications', label: 'Publications' },
-    { id: 'education', label: 'Education' },
     { id: 'leadership', label: 'Leadership' },
-    { id: 'contact', label: 'Contact' },
   ];
 
   useEffect(() => {

@@ -4,9 +4,7 @@ import AboutMe from './components/AboutMe';
 import Experiences from './components/Experiences';
 import Projects from './components/Projects';
 import Publications from './components/Publications';
-import Education from './components/Education';
 import Leadership from './components/Leadership';
-import Contact from './components/Contact';
 import Navigation from './components/Navigation';
 
 function App() {
@@ -52,14 +50,8 @@ function App() {
         <section id="publications" className="section">
           <Publications />
         </section>
-        <section id="education" className="section">
-          <Education />
-        </section>
         <section id="leadership" className="section">
           <Leadership />
-        </section>
-        <section id="contact" className="section">
-          <Contact />
         </section>
       </main>
     </div>
