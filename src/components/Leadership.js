@@ -19,7 +19,6 @@ const Leadership = () => {
       description: [
         "Developed a device for interventional radiologists to maintain stable access to the lymph nodes during lymphangiographies.",
         "Conducted root cause, failure mode, and risk analysis to identify procedural issues and develop design requirements for solution.",
-        "Employed 3D printing, CAD, laser cutting, soldering, and usability testing to design and build 2 functional works-like prototypes.",
         "Pava Center's Spark Accelerator Alumni, 2023 Hopkins New Venture Challenge Finalist, 2023 Design Day Presenters"
       ]
     },
