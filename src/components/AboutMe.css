@@ -144,12 +144,12 @@
   box-shadow: 0 8px 20px rgba(16, 79, 85, 0.3);
 }
 
-.contact-btn {
+.cv-btn {
   background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
   color: white;
 }
 
-.contact-btn:hover {
+.cv-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(40, 167, 69, 0.3);
 }

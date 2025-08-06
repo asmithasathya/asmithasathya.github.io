@@ -56,19 +56,13 @@ const AboutMe = () => {
               <a href="https://www.linkedin.com/in/asmithasathya/" target="_blank" rel="noopener noreferrer" className="action-btn linkedin-btn">
                 <span>LinkedIn</span>
               </a>
-              <a href="/resume.pdf" download className="action-btn resume-btn">
+              <a href="/Resume_Sathya_Asmitha.pdf" download className="action-btn resume-btn">
+                <span>Download Resume</span>
+              </a>
+              <a href="/CV_Sathya_Asmitha.pdf" download className="action-btn cv-btn">
                 <span>Download CV</span>
               </a>
-              <button 
-                onClick={() => {
-                  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="action-btn contact-btn"
-              >
-                <span>Contact Me</span>
-              </button>
             </div>
-            
           </div>
           <div className="about-contact-info">
             <span className="about-email">Email: asmitha.sathya@gmail.com</span>

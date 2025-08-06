@@ -24,6 +24,13 @@ html, body {
   height: 133.33%;
 }
 
+#root {
+  transform: scale(0.75);
+  transform-origin: top left;
+  width: 133.33%; /* 1 / 0.75 = 1.3333 to compensate width */
+  height: 133.33%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

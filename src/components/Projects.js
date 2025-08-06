@@ -23,7 +23,7 @@ const Projects = () => {
         "Utilized YOLOv8 and EfficientNet for segmentation and regression in Python to determine hemoglobin level, achieving RMSE of 1.34."
       ],
       technologies: ["Python", "Pandas", "PyTorch", "OpenCV", "scikit-learn"],
-      github: ""
+      github: "https://github.com/asmithasathya/predicting-hemoglobin-levels"
     },
     {
       title: "Bone Age Prediction from X-Ray Images",
@@ -34,7 +34,7 @@ const Projects = () => {
         "Reduced MAE by 55.5% from previously accepted MobileNet model."
       ],
       technologies: ["Python", "OpenCV", " SciPy", "matplotlib"],
-      github: ""
+      github: "https://github.com/asmithasathya/bone-age-prediction"
     },
     {
       title: "Query Ability of Probabilistic Data Structures",
